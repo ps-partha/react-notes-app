@@ -1,0 +1,16 @@
+CREATE TABLE notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    username VARCHAR(50) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    user_id VARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE users (
+    id VARCHAR(50) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
